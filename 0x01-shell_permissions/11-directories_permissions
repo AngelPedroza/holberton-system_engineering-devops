@@ -1,3 +1,3 @@
 #!/bin/bash
-chmod Xuga+x
+chmod a+X * 
 
