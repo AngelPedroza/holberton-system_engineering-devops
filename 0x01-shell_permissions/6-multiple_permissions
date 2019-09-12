@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -uga+114 hello
+chmod ug11,a4 hello
