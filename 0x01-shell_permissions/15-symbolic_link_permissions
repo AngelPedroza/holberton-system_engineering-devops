@@ -1,3 +1,2 @@
 #!/bin/bash
-chown -H betty _hello
-chgrp -H holberton _hello
+chown -h betty:holberton _hello
