@@ -1,2 +1,2 @@
 #!/bin/bash
-source HOLBERTON=Betty
+export HOLBERTON=Betty
