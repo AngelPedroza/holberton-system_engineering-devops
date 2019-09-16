@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.git" | rev | cut -f 1 | rev | sort
+find . -type f -name "*.git" | rev | cut -f 1 | rev | sort -V -f
