@@ -1,1 +1,1 @@
-# I love the f**cking Readmes
+# Exercise for start to use the shell
