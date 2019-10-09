@@ -1,1 +1,1 @@
-This is a directory for work to holbrton
+# More exercises for holberton
