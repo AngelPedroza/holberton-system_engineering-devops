@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+i=0
+while [ $i -lt 13 ]; do
+    j=1
+    echo "Hour: $i"
+    while [ $j -lt 60 ]; do
+      	echo "$j"
+	let "j += 1"
+    done
+    let "i += 1"
+done
