@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#give me username, id and path
 input="/etc/passwd"
 while read -r line; do
     echo "$line" | cut -d ":" -f 1,3,6

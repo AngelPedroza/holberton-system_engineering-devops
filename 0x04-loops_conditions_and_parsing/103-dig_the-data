@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#sort the most visited web pages
 awk '{ printf("%s %s\n",$1, $9) }' apache-access.log | sort | uniq -c | sort -nr | awk '{printf("    %s %s %s\n", $1, $2, $3)}'

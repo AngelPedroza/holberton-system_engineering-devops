@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#make a clock
 i=0
 while [ $i -lt 13 ]; do
     j=1

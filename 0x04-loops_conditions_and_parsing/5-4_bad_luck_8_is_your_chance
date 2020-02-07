@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#print holbertonshool 10 times, bad luck in 4, good luck in 8
 i=1
 while [ $i -lt 11 ]; do
       if [ $i -eq 4 ]

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#check if a file exist
 a="$(pwd)/holbertonschool"
 if [ -e "$a" ]
 then

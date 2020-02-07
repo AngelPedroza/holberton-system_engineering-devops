@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Lucky in differents countries
 i=1
 while [ $i -lt 21 ]; do
       echo "$i"

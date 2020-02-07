@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Show a story
 input="/etc/passwd"
 while read -r line; do
     USERNAME=$(echo "$line" | cut -d ":" -f 1)
