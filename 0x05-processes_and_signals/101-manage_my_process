@@ -2,27 +2,27 @@
 #script with options
 start()
 {
-    echo "manage_my_process started"
+    ./manage_my_process &
     sudo touch /var/run/my_process.pid
     sudo chmod 777 /var/run/my_process.pid
     echo "$!" > /var/run/my_process.pid
-    ./manage_my_process &
+    echo "manage_my_process started"
 }
 stop()
 {
-    pgrep -f manage_my_process | xargs kill -15 &
-    sudo rm /var/run/my_process.pid
+    kill $(cat /var/run/my_process.pid) &
+    sudo rm -rf /var/run/my_process.pid
     echo "manage_my_process stopped"
 }
 restart()
 {
-    pgrep -f manage_my_process | xargs kill -15 &
-    sudo rm /var/run/my_process.pid
+    kill $(cat /var/run/my_process.pid) &
+    sudo rm -rf /var/run/my_process.pid
 
+    ./manage_my_process &
     sudo touch /var/run/my_process.pid
     sudo chmod 777 /var/run/my_process.pid
     echo "$!" > /var/run/my_process.pid
-    ./manage_my_process &
     echo "manage_my_process restarted"
 }
 case "$1" in
@@ -31,3 +31,4 @@ case "$1" in
      restart) restart;;
      *) echo "Usage: manage_my_process {start|stop|restart}";;
 esac
+exit 0
