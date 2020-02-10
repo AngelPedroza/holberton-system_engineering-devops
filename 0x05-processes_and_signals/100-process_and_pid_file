@@ -4,7 +4,7 @@
 sudo touch /var/run/holbertonscript.pid
 sudo chmod 777 /var/run/holbertonscript.pid
 var=$(pgrep -f 100-process_and_pid_file)
-sudo echo "$var" >> /var/run/holbertonscript.pid
+echo "$var" >> /var/run/holbertonscript.pid
 
 sigterm()
 {
