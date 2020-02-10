@@ -10,14 +10,14 @@ start()
 }
 stop()
 {
-    sudo kill "$(cat /var/run/my_process.pid)"
-    sudo rm -rf /var/run/my_process.pid
+    sudo kill -15 "$(cat /var/run/my_process.pid)"
+    sudo rm -f /var/run/my_process.pid
     echo "manage_my_process stopped"
 }
 restart()
 {
-    sudo kill "$(cat /var/run/my_process.pid)"
-    sudo rm -rf /var/run/my_process.pid
+    sudo kill -15 "$(cat /var/run/my_process.pid)"
+    sudo rm -f /var/run/my_process.pid
 
     ./manage_my_process &
     sudo touch /var/run/my_process.pid
