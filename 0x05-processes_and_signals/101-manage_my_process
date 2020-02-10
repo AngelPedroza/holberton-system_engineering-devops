@@ -5,7 +5,7 @@ start()
     echo "manage_my_process started"
     sudo touch /var/run/my_process.pid
     sudo chmod 777 /var/run/my_process.pid
-    sudo pgrep -f manage_my_process > /var/run/my_process.pid
+    echo "$!" > /var/run/my_process.pid
     ./manage_my_process &
 }
 stop()
@@ -21,7 +21,7 @@ restart()
 
     sudo touch /var/run/my_process.pid
     sudo chmod 777 /var/run/my_process.pid
-    sudo pgrep -f manage_my_process > /var/run/my_process.pid
+    echo "$!" > /var/run/my_process.pid
     ./manage_my_process &
     echo "manage_my_process restarted"
 }
