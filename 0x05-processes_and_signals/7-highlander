@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+sigterm()
+{
+	echo "I am invincible!!!"
+}
+
+trap "sigterm" SIGTERM
+while ((1)); do
+      echo "To infinity and beyond"
+      sleep 2
+done
