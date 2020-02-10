@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#Another method to kill a process
 pkill -f 4-to_infinity_and_beyond

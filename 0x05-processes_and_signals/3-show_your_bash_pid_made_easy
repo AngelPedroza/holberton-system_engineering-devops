@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#Another method
 pgrep -l bash

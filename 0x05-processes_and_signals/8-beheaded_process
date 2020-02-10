@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#pass the pid to kill with xargs couse kill not recive parameters
 pgrep -f 7-highlander | xargs kill -9

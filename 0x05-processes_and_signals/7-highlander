@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#NOt kill with sigterm
 sigterm()
 {
 	echo "I am invincible!!!"
