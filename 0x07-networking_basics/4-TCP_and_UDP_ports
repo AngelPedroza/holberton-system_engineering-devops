@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# Show a; the ip and ports
 netstat -pl
