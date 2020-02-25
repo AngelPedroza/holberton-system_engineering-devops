@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# Search the local host in ifconfig
 ifconfig | grep 'inet addr' | cut -d ":" -f 2 | cut -d " " -f 1
