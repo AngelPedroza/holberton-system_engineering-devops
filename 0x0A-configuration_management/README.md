@@ -1,0 +1,1 @@
+# Puppet and configuration management
