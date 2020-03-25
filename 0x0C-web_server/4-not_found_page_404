@@ -6,5 +6,5 @@ echo "Holberton School" > /var/www/html/index.nginx-debian.html
 new_string="server_name _;\n\trewrite ^\/redirect_me/ https://www.youtube.com/watch?v=-FlxM_0S2lA permanent"
 echo "Ceci n'est pas une page" | sudo tee -a /usr/share/nginx/html/custom_404.html
 second_string="$new_string\n\n\terror_page 404 \/custom_404.html;\n\tlocation = \/custom_404.html {\n\troot \/usr\/share\/nginx\/html;\n\tinternal;\n}\n"
-sed -i "s/server_name _;/$second_string/" /etc/nginx/sites-enable/default
+sed -i "s/server_name _;/$second_string/" /etc/nginx/sites-enabled/default
 service nginx start
