@@ -14,6 +14,6 @@ backend nodes
       server 1187-web-01 35.237.103.2:80 check
       server 1187-web-02 18.209.63.81:80 check"
 
-echo "$confi" >> /etc/haproxy/haproxy.cfg
-echo "ENABLED=1" >> /etc/default/haproxy
-service haproxy start
+echo -e "$confi" | sudo tee -a /etc/haproxy/haproxy.cfg
+echo -e "ENABLED=1" | sudo tee -a /etc/default/haproxy
+sudo service haproxy restart
