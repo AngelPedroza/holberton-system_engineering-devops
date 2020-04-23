@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Create a Mysql backup and compress it
+if [ $# -gt 0 ]
+then
+	pwd=$1
+else
+	pwd=""
+fi
+
+mysqldump --all-databases --user="root" --password=$pwd > backup.sql
+today=$(date +"%d-%m-%Y")
+tar -czf "$today".tar.gz backup.sql
