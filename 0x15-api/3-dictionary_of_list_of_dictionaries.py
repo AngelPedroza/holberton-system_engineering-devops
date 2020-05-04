@@ -14,19 +14,24 @@ if __name__ == "__main__":
     except:
         print("Not a valid JSON")
 
-    task_dic = {}
-    task_list = []
-    id_dic = {}
+    final = {}
+    user_names = {}
 
     for user in users:
-        name_employ = user.get("username")
-        for task in tasks_json:
-            if task.get("userId") is user.get("id"):
-                task_dic["username"] = name_employ
-                task_dic["task"] = task.get("title")
-                task_dic["completed"] = task.get("completed")
-                task_list.append(task_dic.copy())
-        id_dic[str(user.get("id"))] = task_list
+        name = user.get("username")
+        user_id = user.get("id")
+        final[user_id] = []
+        user_names[user_id] = name 
+
+    task_dic = {}
+    for task in tasks_json:
+        user_id = task.get("userId")
+        task_dic["username"] = user_names[user_id]
+        task_dic["task"] = task.get("title")
+        task_dic["completed"] = task.get("completed")
+
+        if final.get(user_id) is not None:
+            final.get(user_id).append(task_dic.copy())
 
     with open("todo_all_employees.json", "w") as f:
-        json.dump(id_dic, f)
+        json.dump(final, f)
