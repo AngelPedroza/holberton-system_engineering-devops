@@ -28,9 +28,9 @@ if __name__ == "__main__":
         status = task.get("completed")
         title = task.get("title")
         task_dic = {
+            "username": user_names.get(user_id).
             "task": title,
-            "completed": status,
-            "username": user_names.get(user_id)
+            "completed": status
         }
 
         if final.get(user_id) is not None:
