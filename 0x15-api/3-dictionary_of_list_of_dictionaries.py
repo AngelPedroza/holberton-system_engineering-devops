@@ -7,13 +7,13 @@ if __name__ == "__main__":
 
     user_info = requests.get('https://jsonplaceholder.typicode.com/users')
     tasks = requests.get('https://jsonplaceholder.typicode.com/todos')
-    
+
     try:
         tasks_json = tasks.json()
         users = user_info.json()
     except:
         print("Not a valid JSON")
-        
+
     task_dic = {}
     task_list = []
     id_dic = {}
