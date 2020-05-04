@@ -21,7 +21,7 @@ if __name__ == "__main__":
     for user in users:
         name_employ = user.get("username")
         for task in tasks_json:
-            if task.get("userId") is 1:
+            if task.get("userId") is user.get("id"):
                 task_dic["username"] = name_employ
                 task_dic["task"] = task.get("title")
                 task_dic["completed"] = task.get("completed")
