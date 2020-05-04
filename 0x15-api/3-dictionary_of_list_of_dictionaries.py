@@ -23,12 +23,15 @@ if __name__ == "__main__":
         final[user_id] = []
         user_names[user_id] = name 
 
-    task_dic = {}
     for task in tasks_json:
         user_id = task.get("userId")
-        task_dic["username"] = user_names[user_id]
-        task_dic["task"] = task.get("title")
-        task_dic["completed"] = task.get("completed")
+        status = task.get("completed")
+        title = task.get("title")
+        task_dic = {
+            "task": title,
+            "completed": status,
+            "username": user_names.get(user_id)
+        }
 
         if final.get(user_id) is not None:
             final.get(user_id).append(task_dic.copy())
