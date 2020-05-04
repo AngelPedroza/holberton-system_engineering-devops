@@ -12,7 +12,7 @@ if __name__ == "__main__":
     try:
         user = user_info.json()
         if user_id is user[0].get("id"):
-            name_employ = user[0].get("name")
+            name_employ = user[0].get("username")
     except:
         print("Not a valid JSON")
 
