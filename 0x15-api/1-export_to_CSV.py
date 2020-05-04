@@ -12,20 +12,22 @@ if __name__ == "__main__":
     try:
         user = user_info.json()
         if user_id is user[0].get("id"):
-            user_name = user[0].get("name")
+            user_name = user[0].get("username")
     except:
         print("Not a valid JSON")
 
     tasks = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'
                          .format(user_id))
-
-    tasks_json = tasks.json()
+    try:
+        tasks_json = tasks.json()
+    except:
+        print("Not a valid JSON")
 
     with open(str(user_id) + ".csv", "w") as data_file:
         csv_writer = csv.writer(data_file, delimiter=',',
                                 quotechar='"', quoting=csv.QUOTE_ALL)
         for task in tasks_json:
-            id = str(task.get("id"))
+            id = str(user_id)
             task_status = str(task.get("completed"))
             task_title = str(task.get("title"))
             csv_writer.writerow([id, user_name, task_status, task_title])
