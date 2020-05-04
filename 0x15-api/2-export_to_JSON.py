@@ -29,7 +29,7 @@ if __name__ == "__main__":
             task_dic["task"] = task.get("title")
             task_dic["completed"] = task.get("completed")
             task_dic["username"] = name_employ
-            task_list.append(task_dic)
+            task_list.append(task_dic.copy())
     except:
         print("Not a valid JSON")
 
