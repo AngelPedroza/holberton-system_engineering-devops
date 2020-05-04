@@ -36,5 +36,5 @@ if __name__ == "__main__":
         if final.get(user_id) is not None:
             final.get(user_id).append(task_dic.copy())
 
-    with open("todo_all_employees.json", "w") as f:
+    with open("todo_all_employees.json", "w", newline="") as f:
         json.dump(final, f)
