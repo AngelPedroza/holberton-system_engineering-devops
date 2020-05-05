@@ -21,7 +21,7 @@ if __name__ == "__main__":
         name = user.get("username")
         user_id = user.get("id")
         final[user_id] = []
-        user_names[user_id] = name 
+        user_names[user_id] = name
 
     for task in tasks_json:
         user_id = task.get("userId")
