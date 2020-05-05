@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Solve an API"""
 if __name__ == "__main__":
+    import json
     import requests
     import sys
-    import json
 
     user_id = int(sys.argv[1])
     user_info = requests.get('https://jsonplaceholder.typicode.com/users?id={}'
