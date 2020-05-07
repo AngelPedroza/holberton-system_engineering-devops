@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Make a request"""
 import requests
 
 
