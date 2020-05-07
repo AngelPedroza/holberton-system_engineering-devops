@@ -18,5 +18,9 @@ def number_of_subscribers(subreddit):
         return 0
 
     data = theme.get("data")
-    subscribers = data.get("subscribers")
-    return subscribers
+    if data:
+        subscribers = data.get("subscribers")
+        if subscribers:
+            return subscribers
+
+    return 0
