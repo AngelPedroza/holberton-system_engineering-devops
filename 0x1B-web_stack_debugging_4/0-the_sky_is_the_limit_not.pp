@@ -1,6 +1,5 @@
 exec { '/bin/bash':
-  command => 'sed -i "s/worker_processes.*/worker_processes 11;/" /etc/nginx/nginx.conf',
-  creates => '/var/www/html/wp-includes/class-wp-locale.phpp',
+  command => 'sed -i "s/worker_processes.*/worker_processes 10;/" /etc/nginx/nginx.conf',
   path    => ['/usr/bin', '/usr/sbin'],
 }
 
